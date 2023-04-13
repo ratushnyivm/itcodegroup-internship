@@ -1,3 +1,5 @@
+# https://ru.hexlet.io/courses/python-numpy
+
 import numpy as np
 
 
