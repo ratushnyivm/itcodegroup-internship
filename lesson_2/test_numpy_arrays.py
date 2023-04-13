@@ -1,3 +1,5 @@
+# https://ru.hexlet.io/courses/python-numpy
+
 from numpy_arrays import make_click_numbers, get_range, get_mean, get_max_clicks_day, get_min_clicks_day  # noqa: E501
 import random
 import pytest
