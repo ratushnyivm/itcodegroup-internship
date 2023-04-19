@@ -11,9 +11,9 @@ Before installation, make sure that you have [Python](https://www.python.org/) i
     git clone https://github.com/ratushnyyvm/itcodegroup-internship.git && cd itcodegroup-internship
     ```
 
-2. Install all necessary dependencies:
+2. Install the program:
    ``` bash
-   make install
+   make setup
    ```
 
 ---
@@ -31,6 +31,8 @@ Before installation, make sure that you have [Python](https://www.python.org/) i
 
 | Command        | Description                              |
 |----------------|------------------------------------------|
+| `make venv`    | Create and activate virtual environment. |
 | `make install` | Install all dependencies of the package. |
 | `make lint`    | Check code with flake8 linter.           |
 | `make test`    | Run tests.                               |
+| `make setup`   | `make venv` + `make install`             |

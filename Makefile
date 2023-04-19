@@ -6,3 +6,9 @@ lint:
 
 test:
 	python -m pytest
+
+venv:
+	python -m venv venv
+	source venv/bin/activate
+
+setup: venv install
