@@ -10,6 +10,7 @@
 | `lesson_3/` | types, functions     |
 | `lesson_4/` | aiogram bot          |
 | `lesson_5/` | html, css, bootstrap |
+| `lesson_6/` | django, ORM          |
 
 ---
 
@@ -45,13 +46,19 @@ Before installation, make sure that you have [Python](https://www.python.org/) i
 
 - python = "^3.11"
 - flake8 = "^6.0.0"
-- pytest = "^7.3.0"  
+- pytest = "^7.3.0"
+
 _lesson_2/_
-- numpy = "^1.24.2"  
+- numpy = "^1.24.2"
+
 _lesson_4/_
 - aiogram = "^2.25.1"
 - python-dotenv = "^1.0.0"
 - requests = "^2.28.2"
+
+_lesson_6/_
+- Django = "^4.2"
+
 
 ### Makefile Commands
 
