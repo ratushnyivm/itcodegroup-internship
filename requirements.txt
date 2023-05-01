@@ -5,3 +5,4 @@ aiogram==2.25.1
 python-dotenv==1.0.0
 requests==2.28.2
 Django==4.2
+django-taggit==3.1.0
