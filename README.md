@@ -58,6 +58,10 @@ _lesson_4/_
 
 _lesson_6/_
 - Django = "^4.2"
+- django-taggit = "^3.1.0"
+- Markdown = "^3.4.3"
+
+
 
 
 ### Makefile Commands
