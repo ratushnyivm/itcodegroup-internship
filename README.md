@@ -10,7 +10,8 @@
 | `lesson_3/` | types, functions     |
 | `lesson_4/` | aiogram bot          |
 | `lesson_5/` | html, css, bootstrap |
-| `lesson_6/` | django, ORM          |
+| `lesson_6/` | django               |
+| `lesson_7/` | django ORM           |
 
 ---
 
@@ -60,6 +61,9 @@ _lesson_6/_
 - Django = "^4.2"
 - django-taggit = "^3.1.0"
 - Markdown = "^3.4.3"
+
+_lesson_7/_
+- ipython = "^8.13.1"
 
 
 
