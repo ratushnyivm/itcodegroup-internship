@@ -1,6 +1,12 @@
 from django.contrib import admin
 
-from .models import Assembly, Material, Part
+from .models import Assembly, AssemblyPart, Material, Part
+
+
+class AssemblyPartInline(admin.TabularInline):
+    model = AssemblyPart
+    autocomplete_fields = ('part',)
+    extra = 10
 
 
 @admin.register(Material)
@@ -19,4 +25,4 @@ class PartAdmin(admin.ModelAdmin):
 @admin.register(Assembly)
 class AssemblyAdmin(admin.ModelAdmin):
     list_display = ('designation', 'name', 'created', 'updated')
-    autocomplete_fields = ('parts',)
+    inlines = [AssemblyPartInline]
