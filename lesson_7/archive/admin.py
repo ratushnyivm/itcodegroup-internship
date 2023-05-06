@@ -26,3 +26,8 @@ class PartAdmin(admin.ModelAdmin):
 class AssemblyAdmin(admin.ModelAdmin):
     list_display = ('designation', 'name', 'created', 'updated')
     inlines = [AssemblyPartInline]
+
+
+@admin.register(AssemblyPart)
+class AssemblyPartAdmin(admin.ModelAdmin):
+    list_display = ('assembly', 'part', 'part_count')
