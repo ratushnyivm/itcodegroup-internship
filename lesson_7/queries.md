@@ -69,9 +69,10 @@ Out[84]: <QuerySet ['Spring d=1, n=10, H=30', 'Spring d=2, n=6, H=30', 'Spring d
    сборке `03.000 - Hydraulic brake cylinder`.
 
 ```bash
+In [110]: from django.db.models import Sum
 In [111]: assembly = Assembly.objects.get(designation='03.000')
-In [137]: assembly.assemblypart_set.aggregate(Sum('part_count'))
-Out[137]: {'part_count__sum': 13}
+In [112]: assembly.assemblypart_set.aggregate(Sum('part_count'))
+Out[112]: {'part_count__sum': 13}
 ```
 
 10. Получить все детали в сборке `03.000 - Hydraulic brake cylinder`,
