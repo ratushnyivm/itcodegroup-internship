@@ -12,6 +12,7 @@
 | `lesson_5/` | html, css, bootstrap |
 | `lesson_6/` | django               |
 | `lesson_7/` | django ORM           |
+| `lesson_8/` | ListView, DetailView |
 
 ---
 
