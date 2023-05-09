@@ -33,6 +33,7 @@ INSTALLED_APPS = [
 
     'materials',
     'parts',
+    'assemblies',
 ]
 
 MIDDLEWARE = [

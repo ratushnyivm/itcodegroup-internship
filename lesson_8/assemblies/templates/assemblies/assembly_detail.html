@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Material detail | Componentor
+  Assembly detail | Componentor
 {% endblock %}
 
 {% block content %}
   <div class="container mt-4">
 
-    <h1 class="my-3">View material</h1>
+    <h1 class="my-3">View assembly</h1>
 
       <div class="card bg-light">
 
@@ -15,7 +15,7 @@
           <div class="container px-1">
             <div class="row row-cols-auto p-1">
               <div class="col-xxl-10 col-sm-12 col-12">
-                <h2>{{ material.name }}</h2>
+                <h2>{{ assembly.designation }} - {{ assembly.name }}</h2>
               </div>
               <div class="col-xxl-1 mb-1">
                 <a class="btn btn-outline-dark icon-link icon-link-hover link-underline link-underline-opacity-0" style="--bs-icon-link-transform: translate3d(-.125rem, 0, 0);" href="#" role="button">
@@ -34,12 +34,20 @@
         <div class="card-body">
           <div class="container">
             <div class="row p-1 border-bottom">
+              <div class="col">Designation</div>
+              <div class="col">{{ assembly.designation }}</div>
+            </div>
+            <div class="row p-1 border-bottom">
+              <div class="col">Name</div>
+              <div class="col">{{ assembly.name }}</div>
+            </div>
+            <div class="row p-1 border-bottom">
               <div class="col">Creation date</div>
-              <div class="col">{{ material.created|date:"d.m.Y H:i" }}</div>
+              <div class="col">{{ assembly.created|date:"d.m.Y H:i" }}</div>
             </div>
             <div class="row p-1">
               <div class="col">Date of change</div>
-              <div class="col">{{ material.updated|date:"d.m.Y H:i" }}</div>
+              <div class="col">{{ assembly.updated|date:"d.m.Y H:i" }}</div>
             </div>
           </div>
         </div>

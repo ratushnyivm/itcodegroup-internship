@@ -13,4 +13,5 @@ urlpatterns = [
     # Apps
     path('materials/', include('materials.urls', namespace='materials')),
     path('parts/', include('parts.urls', namespace='parts')),
+    path('assemblies/', include('assemblies.urls', namespace='assemblies')),
 ]

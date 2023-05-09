@@ -43,11 +43,11 @@
             </div>
             <div class="row p-1 border-bottom">
               <div class="col">Creation date</div>
-              <div class="col">{{ part.created }}</div>
+              <div class="col">{{ part.created|date:"d.m.Y H:i" }}</div>
             </div>
             <div class="row p-1">
               <div class="col">Date of change</div>
-              <div class="col">{{ part.updated }}</div>
+              <div class="col">{{ part.updated|date:"d.m.Y H:i" }}</div>
             </div>
           </div>
         </div>
