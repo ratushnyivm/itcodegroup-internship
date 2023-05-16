@@ -13,6 +13,7 @@
 | `lesson_6/` | django               |
 | `lesson_7/` | django ORM           |
 | `lesson_8/` | ListView, DetailView |
+| `lesson_9/` | CRUD, search         |
 
 ---
 
