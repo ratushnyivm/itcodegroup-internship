@@ -7,7 +7,7 @@
 {% block content %}
   <div class="container mt-4">
 
-    <h1 class="my-3">View assembly</h1>
+    <h1 class="display-6 my-3">View assembly</h1>
 
       <div class="card bg-light">
 
@@ -18,12 +18,12 @@
                 <h2>{{ assembly.designation }} - {{ assembly.name }}</h2>
               </div>
               <div class="col-xxl-1 mb-1">
-                <a class="btn btn-outline-dark icon-link icon-link-hover link-underline link-underline-opacity-0" style="--bs-icon-link-transform: translate3d(-.125rem, 0, 0);" href="#" role="button">
+                <a class="btn btn-outline-dark icon-link icon-link-hover link-underline link-underline-opacity-0" style="--bs-icon-link-transform: translate3d(-.125rem, 0, 0);" href="{% url 'assemblies:assembly_update' assembly.id %}" role="button">
                   <i class="bi bi-clipboard-plus mb-2"></i> Update
                 </a>
               </div>
               <div class="col-xxl-1 mb-1">
-                <a class="btn btn-outline-danger icon-link icon-link-hover link-underline link-underline-opacity-0" style="--bs-icon-link-transform: translate3d(-.125rem, 0, 0);" href="#" role="button">
+                <a class="btn btn-outline-danger icon-link icon-link-hover link-underline link-underline-opacity-0" style="--bs-icon-link-transform: translate3d(-.125rem, 0, 0);" href="{% url 'assemblies:assembly_delete' assembly.id %}" role="button">
                   <i class="bi bi-clipboard-x mb-2"></i> Delete
                 </a>
               </div>

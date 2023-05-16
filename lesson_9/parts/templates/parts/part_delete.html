@@ -7,9 +7,7 @@
 {% block content %}
   <div class="container mt-4">
 
-    <h1 class="display-6 my-3">Material delete</h1>
-
-
+    <h1 class="display-6 my-3">Part delete</h1>
 
     <form action="{% url 'parts:part_delete' part.id %}" method="post">
       {% csrf_token %}
