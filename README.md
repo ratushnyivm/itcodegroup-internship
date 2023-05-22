@@ -4,16 +4,17 @@
 
 ## Description
 
-| directory   | keywords             |
-|-------------|----------------------|
-| `lesson_2/` | git, issue, PR, MR   |
-| `lesson_3/` | types, functions     |
-| `lesson_4/` | aiogram bot          |
-| `lesson_5/` | html, css, bootstrap |
-| `lesson_6/` | django               |
-| `lesson_7/` | django ORM           |
-| `lesson_8/` | ListView, DetailView |
-| `lesson_9/` | CRUD, search         |
+| directory    | keywords             |
+|--------------|----------------------|
+| `lesson_2/`  | git, issue, PR, MR   |
+| `lesson_3/`  | types, functions     |
+| `lesson_4/`  | aiogram bot          |
+| `lesson_5/`  | html, css, bootstrap |
+| `lesson_6/`  | django               |
+| `lesson_7/`  | django ORM           |
+| `lesson_8/`  | ListView, DetailView |
+| `lesson_9/`  | CRUD, search         |
+| `lesson_10/` | tests, coverage      |
 
 ---
 
@@ -67,7 +68,9 @@ _lesson_6/_
 _lesson_7/_
 - ipython = "^8.13.1"
 
-
+_lesson_10/_
+- factory-boy = "^3.2.1"
+- coverage = "^7.2.5"
 
 
 ### Makefile Commands
