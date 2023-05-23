@@ -3,37 +3,7 @@ from http import HTTPStatus
 from django.test import Client, TestCase
 from django.urls import reverse
 
-from . import factories
-
-
-class MaterialTest(TestCase):
-
-    def setUp(self) -> None:
-        self.client = Client()
-        self.material = factories.FakeMaterial()
-
-    def test_material_list(self):
-        response = self.client.get(reverse('materials:material_list'))
-        self.assertEqual(response.status_code, 200)
-
-    def test_material_detail(self):
-        response = self.client.get(
-            reverse(
-                'materials:material_detail', kwargs={'pk': self.material.pk}
-            )
-        )
-        self.assertEqual(response.status_code, 200)
-
-    def test_material_create(self):
-        data = {
-            'name': 'Steel 45'
-        }
-        response = self.client.post(
-            reverse('materials:material_create'),
-            data=data,
-            follow=True
-        )
-        self.assertEqual(response.status_code, 200)
+from materials import factories
 
 
 class MaterialListViewTest(TestCase):
@@ -41,9 +11,9 @@ class MaterialListViewTest(TestCase):
 
     def setUp(self) -> None:
         self.client = Client()
-        self.material1 = factories.FakeMaterial(name='material_1')
-        self.material2 = factories.FakeMaterial(name='material_2')
-        self.material3 = factories.FakeMaterial(name='material_3')
+        self.material1 = factories.MaterialFactory(name='material_1')
+        self.material2 = factories.MaterialFactory(name='material_2')
+        self.material3 = factories.MaterialFactory(name='material_3')
 
     def test_view_url_exists_at_desired_location(self) -> None:
         response = self.client.get('/materials/')
@@ -58,7 +28,7 @@ class MaterialListViewTest(TestCase):
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertTemplateUsed(response, 'materials/material_list.html')
 
-    def test_list_all_tasks(self) -> None:
+    def test_list_all_materials(self) -> None:
         response = self.client.get(reverse('materials:material_list'))
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertEqual(len(response.context['materials']), 3)
@@ -71,3 +41,27 @@ class MaterialListViewTest(TestCase):
         self.assertIn(self.material2, material_list)
         self.assertNotIn(self.material1, material_list)
         self.assertNotIn(self.material3, material_list)
+
+
+class MaterialTest(TestCase):
+
+    def setUp(self) -> None:
+        self.client = Client()
+        self.material = factories.MaterialFactory()
+
+    def test_material_detail(self):
+        response = self.client.get(
+            reverse(
+                'materials:material_detail', kwargs={'pk': self.material.pk}
+            )
+        )
+        self.assertEqual(response.status_code, 200)
+
+    def test_material_create(self):
+        data = {'name': 'Steel 45'}
+        response = self.client.post(
+            reverse('materials:material_create'),
+            data=data,
+            follow=True
+        )
+        self.assertEqual(response.status_code, 200)

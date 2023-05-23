@@ -1,14 +1,15 @@
 import factory
-from faker import Faker
+from faker import Factory
 
 from .models import Material
 
-faker = Faker()
+factory_en = Factory.create()
 
 
-class FakeMaterial(factory.django.DjangoModelFactory):
-    name = faker.word()
-    density = faker.random_number(digits=4)
+class MaterialFactory(factory.django.DjangoModelFactory):
+
+    name = factory.Sequence(lambda n: f'Material_{factory_en.word()}{n}')
+    density = factory.Sequence(lambda d: factory_en.random_number(digits=5))
 
     class Meta:
         model = Material
