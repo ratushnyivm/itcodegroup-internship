@@ -15,6 +15,7 @@
 | `lesson_8/`  | ListView, DetailView |
 | `lesson_9/`  | CRUD, search         |
 | `lesson_10/` | tests, coverage      |
+| `lesson_11/` | docker               |
 
 ---
 
