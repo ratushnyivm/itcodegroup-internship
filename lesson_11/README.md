@@ -4,5 +4,5 @@
 
 ## Features:
 
-- implemented factories for generating objects during testing
-- implemented tests for list views
+- created Dockerfile
+- image published on [docker hub](https://hub.docker.com/repository/docker/ratushnyivm/componentor_image/general)
