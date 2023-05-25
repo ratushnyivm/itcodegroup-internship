@@ -4,18 +4,18 @@
 
 ## Description
 
-| directory    | keywords             |
-|--------------|----------------------|
-| `lesson_2/`  | git, issue, PR, MR   |
-| `lesson_3/`  | types, functions     |
-| `lesson_4/`  | aiogram bot          |
-| `lesson_5/`  | html, css, bootstrap |
-| `lesson_6/`  | django               |
-| `lesson_7/`  | django ORM           |
-| `lesson_8/`  | ListView, DetailView |
-| `lesson_9/`  | CRUD, search         |
-| `lesson_10/` | tests, coverage      |
-| `lesson_11/` | docker               |
+| directory    | keywords               |
+|--------------|------------------------|
+| `lesson_2/`  | git, issue, PR, MR     |
+| `lesson_3/`  | types, functions       |
+| `lesson_4/`  | aiogram bot            |
+| `lesson_5/`  | html, css, bootstrap   |
+| `lesson_6/`  | django                 |
+| `lesson_7/`  | django ORM             |
+| `lesson_8/`  | ListView, DetailView   |
+| `lesson_9/`  | CRUD, search           |
+| `lesson_10/` | tests, coverage        |
+| `lesson_11/` | docker, github actions |
 
 ---
 
