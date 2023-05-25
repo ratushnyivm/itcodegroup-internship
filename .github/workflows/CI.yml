@@ -2,6 +2,9 @@ name: CI
 
 on: [push, pull_request]
 
+env:
+  SECRET_KEY: ${{ secrets.SECRET_KEY }}
+
 jobs:
   tests:
 
